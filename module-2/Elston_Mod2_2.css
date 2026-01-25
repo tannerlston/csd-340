@@ -35,7 +35,7 @@ a:visited {
     
 }
 
-a:hover {
+a:hover,:focus {
     color: #D6A800;
     text-decoration: underline;
 }
