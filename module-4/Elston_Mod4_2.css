@@ -1,0 +1,49 @@
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+}
+
+#image-gallery {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+#image-gallery div {
+  margin-top: 10%;
+  border: 1px solid black;
+  text-align: center;
+}
+
+#image-gallery h3{
+    color: rgb(210 180 140);
+}
+
+#image-gallery figure {
+    text-align: center;
+}
+
+#image-gallery figure figcaption i{
+    font-size: .75em;
+    color: rgb(0 0 128);
+}
+
+.bottom-div {
+    width: 100%;
+    margin-top: 60%;
+    float: right;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+a {
+    color: rgb(128 0 0);
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+}
