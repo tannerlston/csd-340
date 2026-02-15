@@ -1,0 +1,99 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: rgb(106, 19, 20);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 400;
+    color: rgb(243, 235, 223);
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: rgb(106, 19, 20);
+    border-bottom: solid 15px teal;
+}
+
+#navbar a{
+    float: left;
+    display:block;
+    color: rgb(243, 235, 223);
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+
+#navbar a:hover{
+    background-color: white;
+    color:rgb(106, 19, 20);
+}
+
+#container {
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 10px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 50%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    text-align: center;
+    font-size: 2em;
+    color: rgb(106, 19, 20);
+    font-weight: 400;
+}
+
+.card-content{
+    padding: 2px 16px;
+ 
+}
+
+li {
+    margin-top: 1%;
+}
+
+footer {
+    background-color: rgb(106, 19, 20);
+    color: rgb(243, 235, 223);
+    font-weight: 400;
+    float: right;
+    padding-right: 10px;
+    font-style: italic;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer p {
+    color:rgb(243, 235, 223);
+    font-weight: 400;
+    float: right;
+    padding-right: 10px;
+    font-style: italic;
+}
+
+footer a {
+    text-decoration: none;
+    color:rgb(243, 235, 223);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
