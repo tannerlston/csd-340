@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<!--
+
+	Tanner Elston
+	Assignment 9.3
+	2/27/26
+
+-->
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="description" content="CSD 340 Web Development with HTML and CSS">
+        <meta name="author" content="Tanner Elston">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+<title>CSD 340 Development with HTML and CSS</title>
+    <link href="" type="text/css" rel="stylesheet" />
+    <script>
+        var firstVariableValue = "victory"
+        var secondVariableValue = "grim"
+        var thirdVariableValue = "dark"
+        var fourthVariableValue = "speedy"
+    </script>
+</head>
+<body>
+<div id="container">
+	<h1>Assignment 9.3: JavaScript - Part 1</h1>
+	<h2>First Inaugural Speech: by Franklin D Roosevelt</h2>
+<p class="intro">
+        "So, first of all, let me assert my firm belief that the only thing we have to fear is…fear itself — 
+        nameless, unreasoning, unjustified terror which paralyzes needed efforts to convert retreat into advance. 
+        In every dark hour of our national life a leadership of frankness and of vigor has met with that understanding and support of the people themselves which is essential to <span id="victory">_______</span>. 
+        And I am convinced that you will again give that support to leadership in these critical days.
+</p>
+<p>
+        More important, a host of unemployed citizens face the <span id="grim">_______</span> problem of existence, and an equally great number toil with little return. 
+        Only a foolish optimist can deny the <span id="dark">_______</span> realities of the moment.
+        Our greatest primary task is to put people to work. This is no unsolvable problem if we face it wisely and courageously.
+        There are many ways in which it can be helped, but it can never be helped merely by talking about it. We must act and act quickly.
+</p>
+<p>
+        I am prepared under my constitutional duty to recommend the measures that a stricken Nation in the midst of a stricken world may require. 
+        These measures, or such other measures as the Congress may build out of its experience and wisdom, I shall seek, within my constitutional authority, to bring to <span id="speedy">_______</span> adoption.
+        But in the event that the Congress shall fail to take one of these two courses, and in the event that the national emergency is still critical, I shall not evade the clear course of duty that will then confront me. 
+        I shall ask the Congress for the one remaining instrument to meet the crisis — broad Executive power to wage a war against the emergency, as great as the power that would be given to me if we were in fact invaded by a foreign foe."
+</p>
+<p>
+	<button type="button" 
+		onclick="document.getElementById('victory').innerHTML = firstVariableValue">victory</button>
+	<button type="button" 
+		onclick="document.getElementById('grim').innerHTML = secondVariableValue">grim</button>
+	<button type="button" 
+		onclick="document.getElementById('dark').innerHTML = thirdVariableValue">dark</button>
+	<button type="button" 
+		onclick="document.getElementById('speedy').innerHTML = fourthVariableValue">speedy</button>
+</p>
+<hr>
+<address>
+	<a href="https://www.historyplace.com/speeches/fdr-first-inaug.htm">Source</a>
+	<p>Franklin D. Roosevelt</p>
+	<p>An Inaugural Speech amidst the Great Depression</p>
+</address>
+</div>
+</body>
+</html>
