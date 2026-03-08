@@ -1,0 +1,173 @@
+:root {
+  --silver:    #c8d0e0;
+  --light-silver: #d0d8f0;
+  --steel:       #a0aac0;
+  --dim-blue: #6878a0;
+  --deep-navy:      rgba(10, 15, 40, 0.95);
+  --deep-navy-card: rgba(10, 15, 40, 0.90);
+  --navy:      rgba(15, 20, 55, 0.95);
+  --midnight: #0a0f28;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 16px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/1280px-FullMoon2010.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--silver);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: var(--deep-navy);
+  padding: 15px 20px;
+  border-bottom: 3px solid var(--steel);
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(14px, 2vw, 22px);
+  color: var(--light-silver);
+}
+
+#navbar {
+  background-color: var(--navy);
+  border-bottom: solid 3px var(--steel);
+}
+
+#navbar a {
+  display: inline-block;
+  color: var(--light-silver);
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: clamp(12px, 1.5vw, 16px);
+}
+
+#navbar a:hover {
+  background-color: var(--light-silver);
+  color: var(--midnight);
+}
+
+#container {
+  padding: 20px;
+  flex: 1;
+  width: 75%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: var(--deep-navy-card);
+  border: 2px solid var(--steel);
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card-title {
+  background-color: var(--navy);
+  color: var(--light-silver);
+  padding: 10px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(11px, 1.2vw, 14px);
+  border-bottom: 2px solid var(--steel);
+}
+
+.card-content {
+  padding: 15px;
+  text-align: center;
+  color: var(--silver);
+  font-size: clamp(12px, 1.2vw, 15px);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.card-content div {
+  margin-top: 5px;
+  font-style: italic;
+  cursor: pointer;
+  color: var(--silver);
+}
+
+footer {
+  background-color: var(--deep-navy);
+  color: var(--light-silver);
+  padding: 10px 20px;
+  border-top: 3px solid var(--steel);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: clamp(11px, 1.2vw, 14px);
+}
+
+#footer-right {
+  margin: 0;
+  color: var(--light-silver);
+}
+
+footer a {
+  color: var(--light-silver);
+}
+
+footer a:hover {
+  color: white;
+}
+
+.photo-credit {
+  margin-top: 8px;
+  font-size: clamp(10px, 1vw, 12px);
+  font-style: italic;
+  color: var(--dim-blue);
+}
+
+.card-content p {
+  margin: 0;
+  line-height: 1.6;
+  color: var(--silver);
+}
+
+.card-content a {
+  color: var(--light-silver);
+}
+
+.card-content a:hover {
+  color: white;
+}
+
+.learn-more {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 20px;
+  background-color: transparent;
+  color: aqua;
+  border: 2px solid aqua;
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 12px;
+}
+
+.card-content .learn-more:hover {
+  background-color: aqua;
+  color: black;
+}
