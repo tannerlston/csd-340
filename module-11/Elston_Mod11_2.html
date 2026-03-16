@@ -1,0 +1,141 @@
+<!--
+    Tanner Elston
+    CSD 340
+    Module 11
+    3/12/26
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description" content="Task List">
+    <meta name="keywords" content="JavaScript, Array Manipulation">
+    <meta name="robots" content="nofollow">
+    <meta name="author" content="Tanner Elston">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link href="Elston_Mod11_2.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+</head>
+
+<body>
+
+<div class="page-wrapper">
+  <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+  <div class="container">
+    <p>
+      Enter a task below and click Add to add task to list. Click Delete Last Entry to
+      remove last entered item. Click Delete Selected Item to delete item selected in drop
+      down. Click Sort to sort items in the list.
+    </p>
+
+    <input type="text" id="taskInput" placeholder="Enter a task...">
+
+    <select id="deleteSelect">
+      <option value="">-- Select item to delete --</option>
+    </select>
+
+    <div class="btn-row">
+      <button title="Type a task above, then click to add it to your list" onclick="addItem()">Add</button>
+      <button title="Removes the most recently added task from the list" onclick="deleteLastItem()">Delete Last Entry</button>
+      <button title="Select a task from the dropdown above, then click to delete it" onclick="deleteSelectedItem()">Delete Selected Item</button>
+      <button title="Sorts all tasks in the list alphabetically A to Z" onclick="sortItems()">Sort</button>
+    </div>
+
+    <div id="taskList"></div>
+  </div>
+</div>
+
+<script>
+  let tasks = [];
+
+  function addItem() {
+    const input = document.getElementById("taskInput");
+    const value = input.value.trim();
+
+    if (value === "") {
+      alert("Please enter a task before clicking Add.");
+      return;
+    }
+
+    tasks.push(value);
+    alert("Item: " + value + " Added as Item " + tasks.length);
+    input.value = "";
+    displayItems();
+    updateDropdown();
+  }
+
+  function deleteLastItem() {
+    if (tasks.length === 0) {
+      alert("There are no items to delete.");
+      return;
+    }
+
+    const deleted = tasks.pop();
+    alert("Item Deleted: " + deleted);
+    displayItems();
+    updateDropdown();
+  }
+
+  function deleteSelectedItem() {
+    const select = document.getElementById("deleteSelect");
+    const selectedValue = select.value;
+
+    if (selectedValue === "") {
+      alert("Please select an item to delete.");
+      return;
+    }
+
+    const index = tasks.indexOf(selectedValue);
+    if (index !== -1) {
+      tasks.splice(index, 1);
+      alert("Item Deleted: " + selectedValue);
+      displayItems();
+      updateDropdown();
+    }
+  }
+
+  function sortItems() {
+    if (tasks.length === 0) {
+      alert("There are no items to sort.");
+      return;
+    }
+
+    tasks.sort();
+    alert("Items have been sorted alphabetically.");
+    displayItems();
+    updateDropdown();
+  }
+
+  function displayItems() {
+    const taskList = document.getElementById("taskList");
+    taskList.innerHTML = "";
+
+    if (tasks.length === 0) {
+      taskList.innerHTML = "<p>No tasks yet.</p>";
+      return;
+    }
+
+    tasks.forEach(function(task, index) {
+      const p = document.createElement("p");
+      p.textContent = (index + 1) + ". " + task;
+      taskList.appendChild(p);
+    });
+  }
+
+  function updateDropdown() {
+    const select = document.getElementById("deleteSelect");
+    select.innerHTML = '<option value="">-- Select item to delete --</option>';
+
+    tasks.forEach(function(task) {
+      const option = document.createElement("option");
+      option.value = task;
+      option.textContent = task;
+      select.appendChild(option);
+    });
+  }
+</script>
+
+</body>
+</html>

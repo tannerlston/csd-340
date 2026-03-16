@@ -1,0 +1,96 @@
+/*
+    Tanner Elston
+    CSD 340
+    Module 11
+    3/12/26
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8eaf0;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+  .container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+
+.page-wrapper {
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Audiowide', sans-serif;
+    color: maroon;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+  p {
+    color: black;
+    margin-bottom: 20px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 14px;
+    box-sizing: border-box;
+    color: #555;
+  }
+
+  select {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 14px;
+    box-sizing: border-box;
+    color: #555;
+  }
+
+  .btn-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background-color: rgb(1, 1, 103);
+    cursor: pointer;
+  }
+
+  button:hover {
+    opacity: 0.85;
+  }
+
+  #taskList {
+    background-color: #f0f2f8;
+    border-radius: 6px;
+    padding: 16px;
+    min-height: 40px;
+  }
+
+  #taskList p {
+    margin: 4px 0;
+    color: #333;
+  }
